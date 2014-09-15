@@ -23,8 +23,6 @@ src_prepare() {
 	sed -i \
 		-e "/^LIBS/s:=.*:=$($(tc-getPKG_CONFIG) libpci --libs):" \
 		src/efibootmgr/module.mk || die
-
-	epatch "${FILESDIR}/${PN}-error-reporting.patch"
 }
 
 src_compile() {
