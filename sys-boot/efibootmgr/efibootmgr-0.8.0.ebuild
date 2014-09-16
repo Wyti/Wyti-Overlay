@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE=""
 
-RDEPEND="sys-libs/efivar"
+RDEPEND="sys-apps/pciutils
+sys-libs/efivar"
 DEPEND="${RDEPEND}"
 
 src_install() {
