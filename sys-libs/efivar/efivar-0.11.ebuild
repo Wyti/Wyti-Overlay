@@ -6,8 +6,8 @@ EAPI=5
 
 inherit flag-o-matic toolchain-funcs eutils
 
-DESCRIPTION="User-space application to modify the EFI boot manager"
-HOMEPAGE="https://github.com/vathpela/efibootmgr"
+DESCRIPTION="Tools and library to manipulate EFI variables"
+HOMEPAGE="https://github.com/vathpela/efivar"
 SRC_URI="https://github.com/vathpela/${PN}/releases/download/${P}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -15,24 +15,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE=""
 
-RDEPEND="sys-libs/efivar"
+RDEPEND=""
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	sed -i \
-		-e "/^LIBS/s:=.*:=$($(tc-getPKG_CONFIG) libpci --libs):" \
-		src/efibootmgr/module.mk || die
 }
 
 src_compile() {
-	strip-flags
-	tc-export CC
-	emake EXTRA_CFLAGS="${CFLAGS}"
 }
 
 src_install() {
-	# build system uses perl, so just do it ourselves
-	dosbin src/efibootmgr/efibootmgr
-	doman src/man/man8/efibootmgr.8
-	dodoc AUTHORS README doc/ChangeLog doc/TODO
 }
