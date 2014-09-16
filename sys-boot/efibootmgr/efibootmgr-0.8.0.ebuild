@@ -17,22 +17,3 @@ IUSE=""
 
 RDEPEND="sys-libs/efivar"
 DEPEND="${RDEPEND}"
-
-src_prepare() {
-	sed -i \
-		-e "/^LIBS/s:=.*:=$($(tc-getPKG_CONFIG) libpci --libs):" \
-		src/efibootmgr/module.mk || die
-}
-
-src_compile() {
-	strip-flags
-	tc-export CC
-	emake EXTRA_CFLAGS="${CFLAGS}"
-}
-
-src_install() {
-	# build system uses perl, so just do it ourselves
-	dosbin src/efibootmgr/efibootmgr
-	doman src/man/man8/efibootmgr.8
-	dodoc AUTHORS README doc/ChangeLog doc/TODO
-}

@@ -17,12 +17,3 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}"
-
-src_prepare() {
-}
-
-src_compile() {
-}
-
-src_install() {
-}
