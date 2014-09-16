@@ -1,7 +1,8 @@
 portage-overlay
 ===============
 
-Personal overlay for various purpose
+Personal overlay for efi related stuff.
+Fell free to report any issues in the github tracker.
 
 If you want to add this overlay copy wyti.xml to /etc/layman/overlays/
 then add wyti to layman.
