@@ -17,9 +17,9 @@ RDEPEND="sys-libs/efivar"
 DEPEND="${RDEPEND}"
 
 src_install() {
-    # build system uses perl, so just do it ourselves
-    dosbin src/efibootmgr/efibootmgr
+	      # build system uses perl, so just do it ourselves
+	      dosbin src/efibootmgr/efibootmgr
 
-    doman src/man/man8/efibootmgr.8
-    dodoc AUTHORS README doc/ChangeLog doc/TODO
+	      doman src/man/man8/efibootmgr.8
+	      dodoc AUTHORS README doc/ChangeLog doc/TODO
 }
