@@ -4,6 +4,8 @@
 
 EAPI=5
 
+inherit java-pkg-2
+
 DESCRIPTION="sbt is a build tool for Scala, Java, and more."
 HOMEPAGE="http://www.scala-sbt.org"
 SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz"
