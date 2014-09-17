@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>yannick.schaeffer@epfl.ch</email>
+    <name>Yannick Schaeffer</name>
+  </maintainer>
+  <longdescription>
+    sbt is a build tool for Scala, Java, and more. For general documentation, see http://www.scala-sbt.org/
+  </longdescription>
+</pkgmetadata>
