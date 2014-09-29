@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE=""
 
 RDEPEND="sys-apps/pciutils
-=sys-libs/efivar-0.11"
+=sys-libs/efivar-0.12"
 DEPEND="${RDEPEND}"
 
 src_install() {
